@@ -1,0 +1,41 @@
+body {
+    background:#E9D5E0;
+    font-family:Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-size: 100%;
+    line-height: 1.6875;
+}
+
+h1,h2 {
+    color:#BF4472;
+    text-align:center;
+}
+
+h2 {
+    font-weight:normal;
+    margin-bottom:0;
+}
+
+h1 {
+    font-family:'Lobster Two', cursive;
+    font-family:'Merienda', cursive;
+    font-size:300%;
+    text-shadow:2px 4px 3px rgba(0,0,0,0.3);
+    margin:0;
+}
+
+#center {
+    margin:0 auto;
+    width:100%;
+    max-width:842px;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        font-size:70%;
+    }
+}
