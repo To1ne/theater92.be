@@ -1,12 +1,12 @@
 body {
-    background:#E9D5E0;
+    background:#FFFFFFF;
     font-family:Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     font-size: 100%;
     text-align:center;
 }
 
 h1,h2,.preface {
-    color:#BF4472;
+    color:#666666;
 }
 
 h1,h2 {
@@ -28,7 +28,7 @@ p,ul {
 
 a {
     text-decoration:none;
-    color:#99375F;
+    color:#6666CC;
 }
 
 a:hover {
@@ -66,11 +66,11 @@ p,ul {
 #footer {
     margin-top:20px;
     padding:5px 0;
-    background:#C67797;
+    background:#CCCCCC;
 }
 
 #footer {
-    color:#99375F;
+    color:#000000;
     font-size:80%;
 }
 
