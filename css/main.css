@@ -87,9 +87,9 @@ a:hover {
     padding-left:0;
 }
 
-#map-canvas {
+#map {
     max-width: 750px;
-    height: 500px;
+    height: 400px;
     margin: 0 auto !important;
 }
 
@@ -131,5 +131,8 @@ html, body {
 @media only screen and (max-width: 400px) {
     body {
         font-size:70%;
+    }
+    #map {
+        height:200px;
     }
 }

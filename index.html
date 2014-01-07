@@ -46,7 +46,7 @@
                 <li>2260 Westerlo</li>
               </ul>
             </address>
-            <div id="map-canvas"></div>
+            <div id="map"></div>
           </div>
           <div id="shows">
             <h2>Speeldata</h2>
@@ -75,10 +75,20 @@
           <p><a href="http://theater92.be/">Theater 92</a> is een onderdeel van <a href="http://dafpv.be/">Personeelsvereniging DAF Trucks Westerlo</a>.</p>
         </div>
 
-        <!--
         <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
         <script>
-         map = new OpenLayers.Map("mapdiv");
+         map = new OpenLayers.Map({
+           div: "map",
+           controls: [
+             new OpenLayers.Control.TouchNavigation({
+               dragPanOptions: {
+                 enableKinetic: true
+               }
+             }),
+             new OpenLayers.Control.Zoom()
+           ]
+         }
+         );
          map.addLayer(new OpenLayers.Layer.OSM());
 
          var lonLat = new OpenLayers.LonLat( 4.935556, 51.127976 )
@@ -95,55 +105,6 @@
          markers.addMarker(new OpenLayers.Marker(lonLat));
 
          map.setCenter (lonLat, zoom);
-        </script>
-        -->
-
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-        <script type="text/javascript">
-         // When the window has finished loading create our google map below
-         google.maps.event.addDomListener(window, 'load', initialize);
-
-         function initialize() {
-//         var myLatLng = new google.maps.LatLng(51.128333, 4.934444);
-           var myLatLng = new google.maps.LatLng(51.127976, 4.935556);
-           // Basic options for a simple Google Map
-           // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-           var mapOptions = {
-             // The latitude and longitude to center the map (always required)
-             center: myLatLng,
-             // How zoomed in you want the map to start at (always required)
-             zoom: 15,
-
-             mapTypeControl: true,
-             mapTypeControlOptions: {
-               style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-             },
-             zoomControl: true,
-             zoomControlOptions: {
-               style: google.maps.ZoomControlStyle.SMALL
-             },
-
-             // How you would like to style the map.
-             // This is where you would paste any style found on Snazzy Maps.
-             styles: [{featureType:"administrative",stylers:[{visibility:"off"}]},{featureType:"poi",stylers:[{visibility:"simplified"}]},{featureType:"road",elementType:"labels",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"simplified"}]},{featureType:"transit",stylers:[{visibility:"simplified"}]},{featureType:"landscape",stylers:[{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{visibility:"off"}]},{featureType:"road.local",stylers:[{visibility:"on"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{visibility:"on"}]},{featureType:"water",stylers:[{color:"#84afa3"},{lightness:52}]},{stylers:[{saturation:-17},{gamma:0.36}]},{featureType:"transit.line",elementType:"geometry",stylers:[{color:"#3f518c"}]}]
-           };
-
-           // Get the HTML DOM element that will contain your map
-           // We are using a div with id="map" seen below in the <body>
-           var mapElement = document.getElementById('map-canvas');
-
-           // Create the Google Map using out element and options defined above
-           var map = new google.maps.Map(mapElement, mapOptions);
-
-           // Add marker
-           var marker = {
-             position: myLatLng,
-             icon: 'img/marker.png',
-             map: map,
-             title: 'Theatercaf&eacut 92',
-           };
-           new google.maps.Marker(marker);
-         }
         </script>
 
         <script type="text/javascript">
