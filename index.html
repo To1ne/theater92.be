@@ -6,9 +6,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Mijnheer gaat op jacht &mdash; Theater 92 (2013)</title>
+        <title>Meneer is op jacht &mdash; Theater 92 (2014)</title>
         <meta name="description" content="Toneelvereniging Theater 92" />
-        <meta name="keywords" content="Theater 92,Mijnheer gaat op jacht,Toneel,Personeelsvereniging DAF Westerlo" />
+        <meta name="keywords" content="Theater 92,Meneer is op jacht,Toneel,Personeelsvereniging DAF Westerlo" />
         <meta name="viewport" content="width=device-width" />
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -16,60 +16,152 @@
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/main.css" />
 
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merienda:700" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Pirata+One' rel='stylesheet' type='text/css' />
 
         <link rel="stylesheet" href="css/font-awesome.min.css" />
         <!--[if IE 7]>
             <link rel="stylesheet" href="css/font-awesome-ie7.min.css" />
         <![endif]-->
+
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- Add your site or application content here -->
         <div id="center">
-          <p class="preface">Theater 92 presenteert</p>
-          <h1>Mijnheer gaat op jacht</h1>
           <div id="affiche">
-            <!--<img src="img/Een-vreemd-koppel.jpg" alt="Een vreemd koppel" />  -->
+            <img src="img/Meneer-is-op-jacht.png" alt="Meneer is op jacht" />
+            <div id="on-affiche">
+              <p class="preface">Theater 92 presenteert</p>
+              <h1 id="title">Meneer is op jacht</h1>
+            </div>
           </div>
-          <p>Meer info binnenkort...
-          </p>
           <div id="locatie">
             <h2>Locatie</h2>
-            <p>&quot;Theatercaf&eacute;&quot; in de Grote kantine van DAF Trucks Vlaanderen.</p>
+            <p><em>Theatercaf&eacute</em> in de Grote kantine van DAF Trucks Vlaanderen.</p>
             <address>
               <ul>
                 <li>Van Doornelaan 1</li>
                 <li>2260 Westerlo</li>
               </ul>
             </address>
+            <div id="map-canvas"></div>
           </div>
-          <h2>Speeldata</h2>
-          <ul>
-            <li>zaterdag 8 maart 2014 om 19u30</li>
-            <li>zondag 9 maart 2014 om 14u30</li>
-            <li>zaterdag 15 maart 2014 om 19u30</li>
-            <li>zondag 16 maart 2014 om 14u30</li>
-            <li>zaterdag 22 maart 2014 om 19u30</li>
-            <li>zaterdag 29 maart 2014 om 19u30</li>
-          </ul>
+          <div id="shows">
+            <h2>Speeldata</h2>
+            <ul>
+              <li>zaterdag 8 maart 2014 om 19u30</li>
+
+              <li>zondag 9 maart 2014 om 14u30</li>
+              <li>zaterdag 15 maart 2014 om 19u30</li>
+              <li>zondag 16 maart 2014 om 14u30</li>
+              <li>zaterdag 22 maart 2014 om 19u30</li>
+              <li>zaterdag 29 maart 2014 om 19u30</li>
+            </ul>
+          </div>
           <h2>Kaarten</h2>
-          <p>binnenkort beschikbaar</p>
+          <p>binnenkort meer info</p>
           <!--
             <ul>
-              <li>Secretariaat personeelsvereniging DAF Trucks Westerlo: <i class="icon-phone"></i>014/56.84.84, <i class="icon-mobile-phone"></i>0498/300.326</li>
-              <li>Vivane Bens: <i class="icon-phone"></i>014/54.71.56 <i class="icon-mobile-phone"></i>0495/14.55.33</li>
-              <li>Alfons Geerinckx: <i class="icon-phone"></i>014/86.84.59</li>
-              <li>Eddy Verbraecken: <i class="icon-phone"></i>013/77.48.15</li>
+            <li>Secretariaat personeelsvereniging DAF Trucks Westerlo: <i class="icon-phone"></i>014/56.84.84, <i class="icon-mobile-phone"></i>0498/300.326</li>
             </ul>
             -->
+          </div>
+          <div id="push"></div>
+          <div id="myDiv"></div>
         </div>
         <div id="footer">
           <p><a href="http://theater92.be/">Theater 92</a> is een onderdeel van <a href="http://dafpv.be/">Personeelsvereniging DAF Trucks Westerlo</a>.</p>
         </div>
+
+        <!--
+        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+        <script>
+         map = new OpenLayers.Map("mapdiv");
+         map.addLayer(new OpenLayers.Layer.OSM());
+
+         var lonLat = new OpenLayers.LonLat( 4.935556, 51.127976 )
+                                    .transform(
+           new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+           map.getProjectionObject() // to Spherical Mercator Projection
+         );
+
+         var zoom = 15;
+
+         var markers = new OpenLayers.Layer.Markers( "Markers" );
+         map.addLayer(markers);
+
+         markers.addMarker(new OpenLayers.Marker(lonLat));
+
+         map.setCenter (lonLat, zoom);
+        </script>
+        -->
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+        <script type="text/javascript">
+         // When the window has finished loading create our google map below
+         google.maps.event.addDomListener(window, 'load', initialize);
+
+         function initialize() {
+//         var myLatLng = new google.maps.LatLng(51.128333, 4.934444);
+           var myLatLng = new google.maps.LatLng(51.127976, 4.935556);
+           // Basic options for a simple Google Map
+           // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+           var mapOptions = {
+             // The latitude and longitude to center the map (always required)
+             center: myLatLng,
+             // How zoomed in you want the map to start at (always required)
+             zoom: 15,
+
+             mapTypeControl: true,
+             mapTypeControlOptions: {
+               style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+             },
+             zoomControl: true,
+             zoomControlOptions: {
+               style: google.maps.ZoomControlStyle.SMALL
+             },
+
+             // How you would like to style the map.
+             // This is where you would paste any style found on Snazzy Maps.
+             styles: [{featureType:"administrative",stylers:[{visibility:"off"}]},{featureType:"poi",stylers:[{visibility:"simplified"}]},{featureType:"road",elementType:"labels",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"simplified"}]},{featureType:"transit",stylers:[{visibility:"simplified"}]},{featureType:"landscape",stylers:[{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{visibility:"off"}]},{featureType:"road.local",stylers:[{visibility:"on"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{visibility:"on"}]},{featureType:"water",stylers:[{color:"#84afa3"},{lightness:52}]},{stylers:[{saturation:-17},{gamma:0.36}]},{featureType:"transit.line",elementType:"geometry",stylers:[{color:"#3f518c"}]}]
+           };
+
+           // Get the HTML DOM element that will contain your map
+           // We are using a div with id="map" seen below in the <body>
+           var mapElement = document.getElementById('map-canvas');
+
+           // Create the Google Map using out element and options defined above
+           var map = new google.maps.Map(mapElement, mapOptions);
+
+           // Add marker
+           var marker = {
+             position: myLatLng,
+             icon: 'img/marker.png',
+             map: map,
+             title: 'Theatercaf&eacut 92',
+           };
+           new google.maps.Marker(marker);
+         }
+        </script>
+
+        <script type="text/javascript">
+         $(document).ready(function(){
+           var url = "http://theater-tickets.herokuapp.com/tickets/json/callback=?";
+//           url = "http://localhost:4567/tickets/json/callback=?";
+           $.getJSON(url, function( data ) {
+             $('#shows ul').empty();
+             $.each(data.shows, function( key, show ) {
+               var li = $('<li/>', { text: show.date });
+               if (show.status) {
+                 $('<em/>', { text: " (" + show.status + ")" }).appendTo(li);
+               }
+               li.appendTo('#shows ul');
+             });
+           });
+         });
+        </script>
 
         <!-- Google Analytics -->
         <script>
