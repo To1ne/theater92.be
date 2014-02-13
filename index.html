@@ -118,6 +118,10 @@
                }
                li.appendTo('#shows ul');
              });
+             if (data.savedate) {
+               
+               $('#shows').append('<em>laatste aanpassing ' + data.savedate + '</em>');
+             }
            })
            .done(function() {
              console.log( "second success" );
