@@ -113,8 +113,12 @@
              $('#shows ul').empty();
              $.each(data.shows, function( key, show ) {
                var li = $('<li/>', { text: show.date });
-               if (show.status) {
-                 $('<em/>', { text: " (" + show.status + ")" }).appendTo(li);
+               if (show.past) {
+                 li.css('text-decoration', 'line-through');
+               } else {
+                 if (show.status) {
+                   $('<em/>', { text: " (" + show.status + ")" }).appendTo(li);
+                 }
                }
                li.appendTo('#shows ul');
              });
