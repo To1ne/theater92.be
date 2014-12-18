@@ -35,14 +35,12 @@ footer p {
 #facebook {
     max-width:720px;
     text-align:right;
-    margin: 0 auto;
+    margin:0 auto;
     padding:0 20px;
 }
-#facebook a i {
-    color:#666666;
-    text-decoration:none;
-    font-size:2em;
-    margin-top: 10px;
+#facebook svg {
+    width:50px;
+    fill:#3b5998;
 }
 /*
   Sticky Footer by Ryan Fait
