@@ -63,8 +63,8 @@ footer::before {
 #locatie h2 {
     margin-top:0;
 }
-
-ul.voorverkoop {
+#locatie ul,
+#tickets ul {
     list-style: none;
 }
 
