@@ -124,7 +124,7 @@ footer, .push {
 
 
 @media only screen and (max-width: 600px) {
-    #map iframe {
+    #map {
 	height:300px;
     }
     h1 {
