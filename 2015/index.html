@@ -21,6 +21,10 @@
         <![endif]-->
 
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+	<!-- MapBox -->
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -45,7 +49,6 @@
               </ul>
             </address>
             <div id="map">
-		<iframe src='https://a.tiles.mapbox.com/v4/to1ne.hf4b5fdd/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoidG8xbmUiLCJhIjoiMk1GVTNibyJ9.P6iV3Hz14RQ4ghsxgDqO2w'></iframe>
 	    </div>
           </div>
           <div id="shows">
@@ -83,5 +86,20 @@
      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    <!-- MapBox -->
+    <script>
+     // Provide your access token
+     L.mapbox.accessToken = 'pk.eyJ1IjoidG8xbmUiLCJhIjoiMk1GVTNibyJ9.P6iV3Hz14RQ4ghsxgDqO2w';
+     // Create a map in the div #map
+     var map = L.mapbox.map('map', 'to1ne.hf4b5fdd');
+
+     // Disable drag and zoom handlers.
+     //map.dragging.disable();
+     //map.touchZoom.disable();
+     //map.doubleClickZoom.disable();
+     map.scrollWheelZoom.disable();
+     // Disable tap handler, if present.
+     if (map.tap) map.tap.disable();
     </script>
 </html>
