@@ -79,7 +79,7 @@
     <script type="text/javascript">
      $(document).ready(function(){
          var url = "http://theater92.herokuapp.com/json/2015/callback=?";
-         url = "http://localhost:4567/json/2015/callback=?";
+//         url = "http://localhost:4567/json/2015/callback=?";
          var jqxhr = $.getJSON(url, function( data ) {
              $('#shows ul').empty();
              $.each(data.shows, function( key, show ) {
