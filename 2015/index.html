@@ -15,11 +15,6 @@
 
         <link rel="stylesheet" href="css/main.css" />
 
-        <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <!--[if IE 7]>
-            <link rel="stylesheet" href="/css/font-awesome-ie7.min.css" />
-        <![endif]-->
-
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
 	<!-- MapBox -->
@@ -80,6 +75,44 @@
             </p>
         </footer>
     </body>
+    <!-- Ticket status -->
+    <script type="text/javascript">
+     $(document).ready(function(){
+         var url = "http://theater92.herokuapp.com/json/2015/callback=?";
+         url = "http://localhost:4567/json/2015/callback=?";
+         var jqxhr = $.getJSON(url, function( data ) {
+             $('#shows ul').empty();
+             $.each(data.shows, function( key, show ) {
+		 var li = $('<li/>', { text: show.date });
+		 if (show.past) {
+                     li.css('text-decoration', 'line-through');
+		 } else {
+                     if (show.status) {
+			 $('<em/>', { text: " (" + show.status + ")" }).appendTo(li);
+                     }
+		 }
+		 li.appendTo('#shows ul');
+             });
+             if (data.savedate) {
+		 
+		 $('#shows').append('<em>laatste aanpassing ' + data.savedate + '</em>');
+             }
+         })
+		      .done(function() {
+			  console.log( "second success" );
+		      })
+		      .fail(function() {
+			  console.log( "error" );
+		      })
+		      .always(function() {
+			  console.log( "complete" );
+		      });
+         // Set another completion function for the request above
+         jqxhr.complete(function() {
+             console.log( "second complete" );
+         });
+     });
+    </script>
     <!-- Google Analytics -->
     <script>
      var _gaq=[['_setAccount','UA-10186252-7'],['_trackPageview']];
