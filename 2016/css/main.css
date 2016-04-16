@@ -2,6 +2,8 @@ body {
   font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   font-size: 1.3em;
   text-align: center;
+  background: #FCECDC;
+  color: #3c302a;
 }
 
 h1 {
@@ -29,6 +31,12 @@ a:hover {
   text-decoration: underline;
 }
 
+#affiche img {
+  z-index:-10;
+  max-width:60%;
+  height:auto;
+}
+
 #map {
   margin: 10px auto 0;
   border: 1px solid #cccccc;
@@ -39,14 +47,14 @@ a:hover {
 }
 
 footer {
-  background: #333344;
-  color: #eeeeee;
+  background: #3c302a;
+  color: #FCECDC;
 }
 footer p {
   padding: 15px 10px 0;
 }
 footer a {
-  color: #aaaaff;
+  color: #ffcc33;
 }
 .facebook {
   max-width: 720px;

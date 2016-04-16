@@ -26,8 +26,12 @@
         <div id="wrapper">
           <div id="info">
             <h1 id="title">Theater 92</h1>
-            <p>Welkom op de website van Theater 92.</p>
-            <p>Binnenkort zal u hier meer info vinden over de volgende voorstellingen. Maar hou alvast de onderstaande data vrij in je agenda.</p>
+          </div>
+          <div id="affiche">
+            <img src="img/Folterkolder.png" alt="Folterkolder" />
+          </div>
+          <div id="info">
+            <p>Dit jaar speelt Theater 92 het absurd &amp; en komish toneelstuk "Folterkolder".</p>
           </div>
           <div id="shows">
             <h2>Speeldata</h2>
@@ -80,7 +84,7 @@
 		 li.appendTo('#shows ul');
              });
              if (data.savedate) {
-		 
+
 		 $('#shows').append('<em>laatste aanpassing ' + data.savedate + '</em>');
              }
          })
