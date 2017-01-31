@@ -3,123 +3,72 @@
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Theater 92</title>
-        <meta name="description" content="Toneelvereniging Theater 92" />
-        <meta name="keywords" content="Theater 92,Toneel,Personeelsvereniging DAF Westerlo" />
-        <meta name="viewport" content="width=device-width" />
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Theater 92</title>
+    <meta name="description" content="Toneelvereniging Theater 92" />
+    <meta name="keywords" content="Theater 92,Toneel,Personeelsvereniging DAF Westerlo,t Buurthuis" />
+    <meta name="viewport" content="width=device-width" />
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main.css" />
 
-        <!-- redirect if possible -->
-        <script>
-         var d = new Date();
-         var n = d.getMonth();
-         var y = d.getFullYear();
-         // redirect to /2016 when current date is before May 2016
-         if ((y < 2016) || ((y == 2016) && (n < 4))) {
-           window.location = "/2016/";
-         }
-        </script>
-
-	<!-- MapBox -->
-	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">Je gebruikt een <strong>verouderde</strong> browser. Gelieve je <a href="http://browsehappy.com/">browser te upgraden</a>.</p>
-        <![endif]-->
-        <div id="wrapper">
-          <div id="info">
-            <h1 id="title">Theater 92</h1>
-            <p>Welkom op de website van Theater 92.</p>
-            <p>Binnenkort zal u hier meer info vinden over de volgende voorstellingen.</p>
-          </div>
-          <div id="locatie">
-            <h2>Locatie</h2>
-            <p><em>Theatercaf&eacute;</em> in de Grote kantine van DAF Trucks Vlaanderen.</p>
-            <address>
-              <ul>
-                <li>Van Doornelaan 1</li>
-                <li>2260 Westerlo</li>
-              </ul>
-            </address>
-            <div id="map">
-	    </div>
-          </div>
-          <div class="push"></div>
-        </div>
-        <footer>
-            <p><a href="http://theater92.be/">Theater 92</a> is een onderdeel van <a href="http://dafpv.be/">Personeelsvereniging DAF Trucks Westerlo</a>.
-                <span class="facebook"><a href="https://www.facebook.com/theater92">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50"><path d="M26 20v-3c0-1.3.3-2 2.4-2H31v-5h-4c-5 0-7 3.3-7 7v3h-4v5h4v15h6V25h4.4l.6-5h-5z"/></svg>
-                </a></span>
-            </p>
-        </footer>
-    </body>
-    <!-- Ticket status -->
-    <script type="text/javascript">
-     $(document).ready(function(){
-         var url = "http://theater92.herokuapp.com/json/2015/callback=?";
-//         url = "http://localhost:4567/json/2015/callback=?";
-         var jqxhr = $.getJSON(url, function( data ) {
-             $('#shows ul').empty();
-             $.each(data.shows, function( key, show ) {
-		 var li = $('<li/>', { text: show.date });
-		 if (show.past) {
-                     li.css('text-decoration', 'line-through');
-		 } else {
-                     if (show.status) {
-			 $('<em/>', { text: " (" + show.status + ")" }).appendTo(li);
-                     }
-		 }
-		 li.appendTo('#shows ul');
-             });
-             if (data.savedate) {
-		 
-		 $('#shows').append('<em>laatste aanpassing ' + data.savedate + '</em>');
-             }
-         })
-		      .done(function() {
-			  console.log( "second success" );
-		      })
-		      .fail(function() {
-			  console.log( "error" );
-		      })
-		      .always(function() {
-			  console.log( "complete" );
-		      });
-         // Set another completion function for the request above
-         jqxhr.complete(function() {
-             console.log( "second complete" );
-         });
-     });
-    </script>
-    <!-- Google Analytics -->
+    <!-- redirect if possible -->
     <script>
-     var _gaq=[['_setAccount','UA-10186252-7'],['_trackPageview']];
-     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+     var d = new Date();
+     var n = d.getMonth();
+     var y = d.getFullYear();
+     var to = 2017;
+     // redirect when current date is before May
+     if ((y < to) || ((y == to) && (n < 4))) {
+       window.location = "/" + to;
+     }
+    </script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="chromeframe">Je gebruikt een <strong>verouderde</strong> browser. Gelieve je <a href="http://browsehappy.com/">browser te upgraden</a>.</p>
+    <![endif]-->
+    <div id="wrapper">
+      <div id="info">
+        <h1 id="title">Theater 92</h1>
+        <p>Welkom op de website van Theater 92.</p>
+        <p>Binnenkort zal u hier meer info vinden over de volgende voorstellingen.</p>
+      </div>
+      <div id="locatie">
+        <h2>Locatie</h2>
+        <address>
+          <ul>
+            <li>Feestzaal 't BuurtHuis</li>
+            <li>Zandstraat 13</li>
+            <li>2431 Veerle-Heide (Laakdal)</li>
+            <li><a href="http://www.hetbuurthuis.be">www.hetbuurthuis.be</a></li>
+          </ul>
+        </address>
+        <div class="map">
+          <iframe class="map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=4.969983100891114%2C51.0472219457056%2C4.987921714782716%2C51.05724393293859&amp;layer=mapnik&amp;marker=51.05223321042586%2C4.978952407836914" style="border: 1px solid black"></iframe>
+	</div>
+        <div class="map-link">
+          <a href="http://www.openstreetmap.org/?mlat=51.0522&amp;mlon=4.9790#map=16/51.0522/4.9790">Grote kaart weergeven</a>
+        </div>
+      </div>
+      <div class="push"></div>
+    </div>
+    <footer>
+      <p><a href="http://theater92.be/">Theater 92</a> is een onderdeel van <a href="http://dafpv.be/">Personeelsvereniging DAF Trucks Westerlo</a>.
+        <span class="facebook"><a href="https://www.facebook.com/theater92">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50"><path d="M26 20v-3c0-1.3.3-2 2.4-2H31v-5h-4c-5 0-7 3.3-7 7v3h-4v5h4v15h6V25h4.4l.6-5h-5z"/></svg>
+        </a></span>
+      </p>
+    </footer>
+  </body>
+  <!-- Google Analytics -->
+  <script>
+   var _gaq=[['_setAccount','UA-10186252-7'],['_trackPageview']];
+   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-    <!-- MapBox -->
-    <script>
-     // Provide your access token
-     L.mapbox.accessToken = 'pk.eyJ1IjoidG8xbmUiLCJhIjoiMk1GVTNibyJ9.P6iV3Hz14RQ4ghsxgDqO2w';
-     // Create a map in the div #map
-     var map = L.mapbox.map('map', 'to1ne.hf4b5fdd');
-
-     // Disable drag and zoom handlers.
-     //map.dragging.disable();
-     //map.touchZoom.disable();
-     //map.doubleClickZoom.disable();
-     map.scrollWheelZoom.disable();
-     // Disable tap handler, if present.
-     if (map.tap) map.tap.disable();
-    </script>
+  </script>
 </html>
