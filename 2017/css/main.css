@@ -1,0 +1,148 @@
+body {
+  font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif;
+  font-size: 1.3em;
+  text-align: center;
+  background: #dddecb;
+  color: #3c302a;
+}
+
+h1 {
+  font-size: 4em;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  padding-bottom: 5px;
+}
+h2 {
+  font-size: 2em;
+  text-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+  margin-top: 40px;
+}
+
+address ul {
+  list-style: none;
+  padding: 0;
+}
+
+.chromeframe {
+  background: #ffffcc;
+  padding: 0.25em 0;
+}
+
+a {
+  text-decoration: none;
+  color: #6666cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#header {
+  background: #FFFEAB;
+}
+
+#affiche img {
+  z-index:-10;
+  max-width:60%;
+  height:auto;
+}
+
+#info, #shows, #tickets {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+#tickets {
+  text-align: left;
+}
+
+#tickets p {
+  margin-top: 10px;
+}
+
+.new {
+  color: #C40233;
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+#map {
+  margin: 10px auto 0;
+  border: 1px solid #ccc;
+  max-width: 700px;
+  max-width: 80%;
+  margin-bottom: -6px;
+  height: 500px;
+}
+
+#map-frame {
+  width: 100%;
+  height: 100%;
+}
+
+#map-link {
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
+
+footer {
+  background: #3c302a;
+  color: #aaab78;
+}
+footer p {
+  padding: 15px 10px 0;
+}
+footer a {
+  color: #dddecb;
+}
+.facebook {
+  max-width: 720px;
+  text-align: right;
+}
+.facebook svg {
+  width: 32px;
+  height: 32px;
+  background: #3a5795;
+  fill: #ffffff;
+          border-radius: 4px; /* future proofing */
+     -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+   -khtml-border-radius: 4px; /* for old Konqueror browsers */
+}
+.facebook svg:hover {
+  fill: #999999;
+}
+
+/*
+  Sticky Footer by Ryan Fait
+  http://ryanfait.com/html5-sticky-footer/
+*/
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+#wrapper {
+  min-height: 100%;
+  margin: 0 auto -105px; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+  height: 105px; /* '.push' must be the same height as 'footer' */
+}
+
+.push {
+  margin-top:20px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  #map {
+    height: 300px;
+  }
+  h1 {
+    font-size: 3em;
+  }
+}
