@@ -66,6 +66,20 @@ a:hover {
   font-size: 0.7em;
 }
 
+.uitverkocht {
+  text-decoration: line-through;
+}
+
+.uitverkocht::after {
+  content: "(uitverkocht)";
+  margin-left: 5px;
+  font-size: 0.8em;
+  text-decoration: none;
+  display: inline-block;
+  color: #993333;
+  vertical-align: top;
+}
+
 #map {
   margin: 10px auto 0;
   border: 1px solid #ccc;
