@@ -66,11 +66,12 @@ footer a {
   color: #aaaaff;
 }
 .facebook {
-  max-width: 720px;
-  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
 }
 .facebook svg {
-  width: 32px;
+p  width: 32px;
   height: 32px;
   background: #3A5795;
   fill: #fff;
@@ -78,9 +79,11 @@ footer a {
      -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
    -khtml-border-radius: 4px; /* for old Konqueror browsers */
+  border: 1px solid transparent;
 }
 .facebook svg:hover {
-  fill: #999999;
+  fill: #eeeeee;
+  border-color: #ffffff;
 }
 
 /*
@@ -93,7 +96,7 @@ footer a {
 html, body {
   height: 100%;
 }
-#wrapper {
+main {
   min-height: 100%;
   margin: 0 auto -105px; /* the bottom margin is the negative value of the footer's height */
 }
