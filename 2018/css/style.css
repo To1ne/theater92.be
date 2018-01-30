@@ -166,22 +166,6 @@ address ul {
   margin-top: 0.2em;
 }
 
-#affiche {
-  margin: 2em 0;
-}
-#affiche a {
-  border: 1px solid #2c4659;
-  display: inline-block;
-}
-#affiche a img {
-  display: block;
-}
-
-#affiche a:hover {
-  border-color: transparent;
-}
-
-
 footer {
   background: #333333;
   color:#eeeeee;
