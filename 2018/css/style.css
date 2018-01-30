@@ -216,3 +216,18 @@ p  width: 32px;
   fill: #eeeeee;
   border-color: #ffffff;
 }
+
+@media only screen and (max-width:580px){
+  header {
+    font-size: 0.7em;
+  }
+  blockquote::before {
+    display: none;
+  }
+  blockquote {
+    margin: 1em 0;
+  }
+  #location h2::after {
+    margin-top: 0.5em;
+  }
+}
