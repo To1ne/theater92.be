@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/theater/public_html/
-    - /usr/bin/make DEST=$DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
