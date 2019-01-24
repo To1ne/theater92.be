@@ -108,6 +108,16 @@ footer, .push {
   margin-top: 20px;
 }
 
+#mc_embed_signup{
+}
+
+/* real people should not fill this in and expect good things - do not
+   remove this or risk form bot signups */
+#mc_embed_signup div {
+  position: absolute;
+  left: -5000px;
+}
+
 
 
 
