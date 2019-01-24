@@ -1,0 +1,140 @@
+body {
+  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+  margin: 0;
+  background-image: url('../img/wall.png');
+  background-repeat: repeat-y;
+}
+
+.presents {
+  text-align: center;
+  font-size: 2em;
+  margin: 0.2em 0;
+}
+header h1 {
+  color: white;
+  background: #735754;
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  transform: scaleY(1.5);
+  line-height: 1.5em;
+}
+p.author {
+  color: white;
+  background: #791524;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+blockquote::before {
+  font-family: Georgia, Times, Times New Roman, serif;
+  content: open-quote;
+  display: inline-block;
+}
+blockquote p {
+  display: inline-block;
+}
+
+address ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+main {
+  margin-left: 110px;
+}
+
+.sign {
+  background: url('../img/sign.png');
+  width: 392px;
+  height: 373px;
+  position: absolute;
+  left: 110px;
+  top: 230px;
+  display: block;
+  z-index: -10;
+}
+.sign__text {
+  color: white;
+  width: 256px;
+  height: 172px;
+  position: absolute;
+  left: 51px;
+  top: 192px;
+  display: block;
+  z-index: -5;
+  text-align: center;
+}
+.sign__text--b-and-b {
+  font-size: 3em;
+  margin: 0.5em 0 0;
+}
+.sign__text--site {
+  font-size: 1.3em;
+  margin: 0.3em;
+  font-family: serif;
+}
+
+#map-frame {
+  width: 100%;
+  height: 50vw;
+  max-height: 15em;
+  min-height: 10em;
+  margin: 0;
+  border: 1px solid black;
+}
+
+#map-link {
+  font-size: 0.8em;
+  margin-top: 0.2em;
+}
+
+footer {
+  background: #333333;
+  color:#eeeeee;
+}
+footer section {
+  padding: 1em;
+}
+footer p {
+  margin: 0;
+  display: inline-block;
+}
+footer a {
+  color: #aaaaff;
+}
+.facebook {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}
+.facebook svg {
+  width: 32px;
+  height: 32px;
+  background: #3A5795;
+  fill: #fff;
+          border-radius: 4px; /* future proofing */
+     -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+   -khtml-border-radius: 4px; /* for old Konqueror browsers */
+  border: 1px solid transparent;
+}
+.facebook svg:hover {
+  fill: #eeeeee;
+  border-color: #ffffff;
+}
+
+@media only screen and (max-width:580px){
+  header {
+    font-size: 0.7em;
+  }
+  blockquote::before {
+    display: none;
+  }
+  blockquote {
+    margin: 1em 0;
+  }
+  #location h2::after {
+    margin-top: 0.5em;
+  }
+}
