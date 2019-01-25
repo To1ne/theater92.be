@@ -96,6 +96,7 @@ section article {
   min-height: 10em;
   margin: 0;
   border: 1px solid black;
+  box-sizing: border-box;
 }
 
 #map-link {
