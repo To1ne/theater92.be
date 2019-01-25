@@ -58,6 +58,7 @@ section {
 section article {
   flex-grow: 1;
   align-self: center;
+  padding: 0 2em;
 }
 
 .sign {
@@ -68,6 +69,7 @@ section article {
   display: block;
   flex-grow: 0;
   flex-shrink: 0;
+  padding: 0;
 }
 .sign__text {
   color: white;
