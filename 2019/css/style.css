@@ -106,6 +106,17 @@ section article {
   margin-top: 0.2em;
 }
 
+#car-box {
+  border-bottom: 20px solid #eee;
+}
+
+#car {
+  height: 216px;
+  width: 400px;
+  margin-left: 3em;
+  margin-bottom: -10px;
+}
+
 footer {
   background: #333333;
   color:#eeeeee;
