@@ -111,10 +111,8 @@ section article {
 }
 
 #car {
-  height: 216px;
-  width: 400px;
   margin-left: 3em;
-  margin-bottom: -10px;
+  margin-bottom: -12px;
 }
 
 footer {

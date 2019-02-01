@@ -157,7 +157,8 @@
           var full = document.getElementById('full');
           var carBox = document.getElementById('car-box');
           var pos = window.innerHeight - carBox.getBoundingClientRect().top;
-          var limit = window.innerHeight * 0.667;
+          var limit = Math.min(window.innerHeight * 0.667,
+                               window.innerWidth - car.getBoundingClientRect().width);
 
           if (pos > limit) {
             flat.style['display'] = null;
