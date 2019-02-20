@@ -112,7 +112,13 @@ section article {
 
 #car {
   margin-left: 3em;
-  margin-bottom: -12px;
+  margin-bottom: -14px;
+}
+
+.street {
+  background: #eee;
+  /* margin-left: 0; */
+  /* padding-left: 110px; */
 }
 
 footer {
