@@ -1,0 +1,179 @@
+body {
+  font-family: serif;
+  margin: 0;
+  background: #f3f3f3;
+}
+
+.presents {
+  font-size: 2em;
+}
+header h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+header section article {
+  font-size: 1.2em;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+address {
+  padding: 0 2em;
+}
+
+address ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+section article {
+  flex-grow: 1;
+}
+
+article h2,
+article p {
+  padding: 0 1em;
+}
+
+.uitverkocht {
+  text-decoration: line-through;
+}
+
+.uitverkocht::after {
+  content: "(uitverkocht)";
+  margin-left: 5px;
+  font-size: 0.8em;
+  text-decoration: none;
+  display: inline-block;
+  color: #993333;
+  vertical-align: top;
+}
+
+#map-frame {
+  width: 80%;
+  height: 50vw;
+  max-height: 15em;
+  min-height: 10em;
+  margin: 0 auto;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: block;
+}
+
+#map-link {
+  font-size: 0.8em;
+  margin-top: 0.2em;
+}
+
+footer {
+  background: #333355;
+  color:#eeeeee;
+}
+footer section {
+  padding: 1em;
+}
+footer p {
+  margin: 0;
+  display: inline-block;
+}
+footer a {
+  color: #ccccff;
+}
+.facebook {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}
+.facebook svg {
+  width: 32px;
+  height: 32px;
+  background: #3A5795;
+  fill: #fff;
+          border-radius: 4px; /* future proofing */
+     -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+   -khtml-border-radius: 4px; /* for old Konqueror browsers */
+  border: 1px solid transparent;
+}
+.facebook svg:hover {
+  fill: #eeeeee;
+  border-color: #ffffff;
+}
+
+
+/* 2020 specific */
+
+header::before {
+  content: '';
+  display: block;
+  padding: 0;
+  margin-left: 15vw;
+  background: url('../img/crack-top.png') no-repeat;
+  width: 255px;
+  height: 65px;
+}
+
+#title {
+  text-align: center;
+}
+
+.presents {
+  background: #eeeef3;
+  padding: 0.5em;
+  margin: 0 auto;
+  max-width: 80vw;
+  border-radius: 5px;
+  border: 2px solid #999;
+}
+
+#wanted {
+  padding: 0
+}
+#wanted img {
+  max-width: 200px;
+}
+
+.crack-left {
+  content: '';
+  display: block;
+  padding: 0;
+  background: url('../img/crack-left.png') no-repeat right;
+  max-width: 337px;
+  height: 224px;
+  shape-outside: polygon(0 0, 100% 65%, 0 100%);
+}
+
+/* #tickets::after { */
+.crack-right {
+  content: '';
+  display: block;
+  padding: 0;
+  background: url('../img/crack-right.png') no-repeat;
+  max-width: 289px;
+  height: 123px;
+  float: right;
+}
+
+#affiche::after {
+  content: '';
+  display: block;
+  padding: 0;
+  background: url('../img/crack-bottom.png') no-repeat;
+  width: 144px;
+  height: 26px;
+  float: right;
+  margin-right: 25vw;
+}
