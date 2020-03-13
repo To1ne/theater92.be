@@ -91,7 +91,8 @@ aside section {
   box-shadow: 4px 4px 12px #666;
 }
 aside article {
-  overflow: hidden scroll;
+  overflow: auto;
+  margin: 10px;
 }
 #close:checked ~ aside {
   display: none;
