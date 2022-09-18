@@ -80,15 +80,15 @@ footer a {
   margin-left: 0.5em;
 }
 .facebook svg {
-p  width: 32px;
+  width: 32px;
   height: 32px;
   background: #3A5795;
   fill: #fff;
+  border: 1px solid transparent;
           border-radius: 4px; /* future proofing */
      -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
    -khtml-border-radius: 4px; /* for old Konqueror browsers */
-  border: 1px solid transparent;
 }
 .facebook svg:hover {
   fill: #eeeeee;
